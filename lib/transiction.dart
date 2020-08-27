@@ -143,6 +143,7 @@ class _TransictionState extends State<Transiction> {
                                       Icons.arrow_drop_down,
                                     )),
                                 elevation: 0,
+                                underline: Text(""),
                                 items: weeks
                                     .map(
                                       (e) => DropdownMenuItem(
@@ -159,6 +160,7 @@ class _TransictionState extends State<Transiction> {
                                                       Radius.circular(10))),
                                           child: Text(
                                             e,
+                                            textAlign: TextAlign.center,
                                             style: TextStyle(fontSize: 13),
                                           ),
                                         ),
@@ -197,6 +199,7 @@ class _TransictionState extends State<Transiction> {
                                             topRight: Radius.circular(10))),
                                     child: Icon(Icons.arrow_drop_down)),
                                 elevation: 0,
+                                underline: Text(""),
                                 items: dates
                                     .map(
                                       (e) => DropdownMenuItem(
@@ -213,6 +216,7 @@ class _TransictionState extends State<Transiction> {
                                                     topLeft:
                                                         Radius.circular(10))),
                                             child: Text(e,
+                                                textAlign: TextAlign.center,
                                                 style:
                                                     TextStyle(fontSize: 13))),
                                         value: e,

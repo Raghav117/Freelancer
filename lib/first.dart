@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:freelancer/transiction.dart';
+
+import 'transiction.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title, this.page}) : super(key: key);
@@ -166,6 +167,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         topRight: Radius.circular(10))),
                                 child: Icon(Icons.arrow_drop_down)),
                             elevation: 0,
+                            underline: Text(""),
                             items: [
                               DropdownMenuItem(
                                 child: Container(
@@ -177,7 +179,10 @@ class _MyHomePageState extends State<MyHomePage> {
                                         borderRadius: BorderRadius.only(
                                             bottomLeft: Radius.circular(10),
                                             topLeft: Radius.circular(10))),
-                                    child: Text("First Week (1-7)")),
+                                    child: Text(
+                                      "First Week (1-7)",
+                                      textAlign: TextAlign.center,
+                                    )),
                                 value: 1,
                               ),
                               DropdownMenuItem(
@@ -190,7 +195,10 @@ class _MyHomePageState extends State<MyHomePage> {
                                         borderRadius: BorderRadius.only(
                                             bottomLeft: Radius.circular(10),
                                             topLeft: Radius.circular(10))),
-                                    child: Text("Two Week (1-7)")),
+                                    child: Text(
+                                      "Two Week (1-7)",
+                                      textAlign: TextAlign.center,
+                                    )),
                                 value: 2,
                               ),
                               DropdownMenuItem(
@@ -203,7 +211,10 @@ class _MyHomePageState extends State<MyHomePage> {
                                         borderRadius: BorderRadius.only(
                                             bottomLeft: Radius.circular(10),
                                             topLeft: Radius.circular(10))),
-                                    child: Text("Third Week (1-7)")),
+                                    child: Text(
+                                      "Third Week (1-7)",
+                                      textAlign: TextAlign.center,
+                                    )),
                                 value: 3,
                               ),
                               DropdownMenuItem(
@@ -216,7 +227,10 @@ class _MyHomePageState extends State<MyHomePage> {
                                         borderRadius: BorderRadius.only(
                                             bottomLeft: Radius.circular(10),
                                             topLeft: Radius.circular(10))),
-                                    child: Text("Forth Week (1-7)")),
+                                    child: Text(
+                                      "Forth Week (1-7)",
+                                      textAlign: TextAlign.center,
+                                    )),
                                 value: 4,
                               ),
                             ],
@@ -229,7 +243,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ],
                     )
-                  : Container(height: 50),
+                  : Container(height: 30),
               Text(
                 page == 1
                     ? "Incentive Count & Eliblity"

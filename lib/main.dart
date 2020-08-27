@@ -1,17 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:freelancer/transiction.dart';
 
 import 'first.dart';
 
 void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  runApp(MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -30,39 +22,45 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Scaffold(
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            RaisedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) {
-                    return MyHomePage(
-                      title: "yeah",
-                      page: 1,
-                    );
-                  },
-                ));
-              },
-              child: Text("Screen 1"),
-            ),
-            RaisedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) {
-                    return MyHomePage(
-                      title: "yeah",
-                      page: 2,
-                    );
-                  },
-                ));
-              },
-              child: Text("Screen 2"),
-            ),
-          ],
-        ),
+      home: MyApp()));
+}
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          RaisedButton(
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) {
+                  return MyHomePage(
+                    title: "yeah",
+                    page: 1,
+                  );
+                },
+              ));
+            },
+            child: Text("Screen 1"),
+          ),
+          RaisedButton(
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) {
+                  return MyHomePage(
+                    title: "yeah",
+                    page: 2,
+                  );
+                },
+              ));
+            },
+            child: Text("Screen 2"),
+          ),
+        ],
       ),
     );
   }
